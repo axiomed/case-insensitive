@@ -6,7 +6,7 @@ Case Insensitive Strings for [Lean 4](https://github.com/leanprover/lean4).
 
 ## Usage
 
-Add Http to your `lakefile.lean`:
+Add CaseInsensitive to your `lakefile.lean`:
 
 ```lean
 require CaseInsensitive from git "https://github.com/axiomed/CaseInsensitive.lean.git"
