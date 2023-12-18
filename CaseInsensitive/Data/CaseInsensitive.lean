@@ -1,5 +1,3 @@
-open Lean
-
 structure CIString where
   private hashValue : Int
   value : String
@@ -9,6 +7,9 @@ def calculateHash (s : String) : Int :=
 
 instance : BEq CIString where
   beq s₁ s₂ := s₁.hashValue == s₂.hashValue
+
+instance : ToString CIString where
+  toString s := s.value
 
 def CIString.create (value : String) : CIString :=
   { hashValue := calculateHash value, value := value }

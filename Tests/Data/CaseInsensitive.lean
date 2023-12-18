@@ -12,5 +12,13 @@ def caseInsensitiveTests : List Assertion := [
 
   Assertion.make "shouldn't be equal because both string not matching"
     false
-    (CIString.create "HELLO there" == CIString.create "GUTEN arben")
+    (CIString.create "HELLO there" == CIString.create "GUTEN arben"),
+
+  Assertion.make "shouldn't be equal because one string is empty"
+    false
+    (CIString.create "HELLO there" == CIString.create ""),
+
+  Assertion.make "should convert CIString to String"
+    "hello"
+    (toString (CIString.create "hello"))
 ]
