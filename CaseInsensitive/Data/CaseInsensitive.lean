@@ -1,4 +1,5 @@
 structure CIString where
+  private mk ::
   private hashValue : Int
   value : String
 
