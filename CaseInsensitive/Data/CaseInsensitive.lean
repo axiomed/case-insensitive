@@ -11,5 +11,8 @@ instance : BEq CIString where
 instance : ToString CIString where
   toString s := s.value
 
+instance : Repr CIString where
+  reprPrec s _ := repr s.value
+
 def CIString.create (value : String) : CIString :=
   { hashValue := calculateHash value, value := value }
