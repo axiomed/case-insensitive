@@ -9,7 +9,3 @@ lean_lib «CaseInsensitive» where
 
 lean_lib «Tests» where
   -- add library configuration options here
-
-lean_exe «tests» where
-  root := `Tests
-  supportInterpreter := true
