@@ -3,7 +3,7 @@ string along with a proof that it is indeed the lowercase representation of the 
 structure String.CI where
   value: String
   prop: ∃ x: String, value = x.toLower
-  deriving BEq, Hashable
+  deriving BEq, Hashable, DecidableEq
 
 instance : Repr String.CI where
   reprPrec s := reprPrec s.value
